@@ -17,14 +17,13 @@ E3D Revo nozzle profiles for the MK3S+ using PrusaSlicer
   * Adjust the start G-code to remove the nozzle size check since the MK3S hardware doesn't support the non-standard nozzle sizes in settings. [Prusa article on creating profiles for difference nozzles](https://help.prusa3d.com/article/creating-profiles-for-different-nozzles_127540)
   * Change the nozzle diameter to whatever you purchased
   * Change min and max layer heights to match what's listed in this table. [E3D Revo high flow slicer starter settings](https://e3d-online.com/pages/revo-high-flow-filament-starter-settings)
-  * Go to dependencies and click "Detach from system preset". I'm not sure if this step is necessary.
   * Save the changes to the printer settings as a new printer
 2. Now we'll create the proper Print Settings for the printer you created in the last step. This will set up the newly possible layer heights.
   * With the newly created printer set in "Printer Settings", go to "Print Settings" and you'll probably just see "default" in the dropdown box.
   * Under "Layers and perimeters", set the "Layer height" equal to whichever of the Fine/Medium/Coarse settings you are making a profile for from [E3D Revo high flow slicer starter settings](https://e3d-online.com/pages/revo-high-flow-filament-starter-settings).
   * Still under "Layers and perimeters", I set the "First layer height" to 1/2 of the nozzle diameter. That seems like roughly a number used in other nozzle profiles.
-  * Under "Speed", I'm guessing at these numbers. I put "0" for everything not greted out in the "Speed for print moves" section. This should set them to be auto.
-  * Still under "Speed", I went down to the "Modifiers" section and set the "First layer speed" to 50%
+  * Under "Speed", I'm guessing at these numbers. I put "0" for everything not greyed out in the "Speed for print moves" section. This should set them to be auto.
+  * Still under "Speed", I went down to the "Modifiers" section and set the "First layer speed" to 0.
   * For the final change under "Speed", I went down to "Auto Speed (advanced)" and set "Max print speed" to the value from the table in [E3D Revo high flow slicer starter settings](https://e3d-online.com/pages/revo-high-flow-filament-starter-settings).
   * Under "Advanced", I set all of the line widths equal to the values for the nozzle from the table in [E3D Revo high flow slicer starter settings](https://e3d-online.com/pages/revo-high-flow-filament-starter-settings).
   * Go to the Dependencies tab and uncheck the "All" box for both "Compatible printers". Then press the "Set" button and check the box for the printer you created in the first step.
