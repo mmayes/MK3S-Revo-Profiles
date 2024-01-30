@@ -38,3 +38,11 @@ E3D Revo nozzle profiles for the MK3S+ using PrusaSlicer
 4. For the final step, you need to actually test with your setup. E3D has a [page that discusses this](https://e3d-online.zendesk.com/hc/en-us/articles/6467176228253-Revo-Nozzle-Maximum-Flow-Rates-) The model used for the test can be found [here](https://www.printables.com/model/281016-flow-rate-test-geometry)
   * As you tweak settings, you can see what percentage of the max possible flow rate you are utilizing by plugging in your values into E3D's [Revo Volumetric Flow Rate Calculator](https://e3d-online.com/pages/revo-high-flow-volumetric-flow-rate-calculator)
   * Another great test model is from CNC Kitchen. He made a [video](https://youtube.com/watch?v=ZgIlSpb-A2Y) where he looked at the Revo high flow nozzles. The model he used is similar to the E3D one above, but in the pictures for the model he shows how he set up the custom gcode for speed changes. [Model Link](https://www.printables.com/model/342075-extrusion-test-structure)
+
+### My results for a Prusa MK3S+ with stock extruder using a Revo hot end with 60w heater.
+* For the 1.4mm HF nozzle with PLA, the highest volumetric flow rate (mm³/s) I could get with just occasional skips was about 28 mm³/s. I settled on 27 to give a little margin. Advertised values were 37.
+  * Interestingly, for the fine setting (0.35 layer height) it seems like the slicer would allow for higher speeds if the volumetric rate was higher. However, for the 1.05 layer height, it seems like the print speed is actually the limiting factor. Even if I increase the volumentric rate all the way up to the theoretical max, the max it ever shows in the preview once sliced is 25.7.
+  * Note: The volumetric limit tables shown by E3D don't differentiate between layer height. So it seems like smaller layer heights would mean it can move faster in order to reach the same output volume.
+* For the 1.4mm HF nozzle with PETG, advertised flow rate is 49.
+* For the 1.0mm HF nozzle with PLA, advertised flow rate is 35
+* For the 1.0mm HF nozzle with PETG, advertised flow rate is 42. 
